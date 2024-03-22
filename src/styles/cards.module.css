@@ -1,0 +1,27 @@
+.image-container{
+    width: 10rem; /* Ancho máximo del contenedor */
+    height: 15.5rem; /* Alto máximo del contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el tamaño del contenedor */
+    display: flex;    
+    border: 4px solid #fafafa;
+    cursor: pointer;
+
+}
+
+.cards-container{
+display: flex;
+flex-direction: column;
+}
+
+.image{
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor manteniendo su relación de aspecto */
+}
+
+.text{
+    color: var(--main-color);
+    font-family: var(--main-font);
+    text-align: center;
+    margin-top: 0.7rem;
+}
