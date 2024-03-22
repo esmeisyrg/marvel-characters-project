@@ -1,0 +1,17 @@
+.subtext-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.text{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
