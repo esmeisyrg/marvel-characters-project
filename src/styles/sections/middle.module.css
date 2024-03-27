@@ -1,11 +1,12 @@
 .middle-container{
     margin-top: 6rem;
+    margin-bottom: 6rem;
+
 }
 
 .cards-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); 
     margin-top: 2.5rem;
     gap: 3.4rem;
 }

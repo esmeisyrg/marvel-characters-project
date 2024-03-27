@@ -14,3 +14,8 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
     border-radius: 2rem;
 }
+
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}

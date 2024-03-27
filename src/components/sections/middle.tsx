@@ -3,13 +3,19 @@ import Subtext from '../sub-text'
 import HeroIcon from '../../assets/iconhero.svg'
 import ComicIcon  from '../../assets/images/comics.svg'
 import Cards from '../cards'
-import Img from '../../assets/images/marvelpic.jpg'
+import CardComics from '../cardComics'
+import { Link } from 'react-router-dom'
+import ApiConnector from '../../utils/apiConnector'
+import ComicsConnector from '../../utils/comicsConnector'
+
 
 interface MiddleProps {
   selectedOption: 'Characters' | 'Comics'
 }
 
 const Middle: React.FC<MiddleProps> = ({ selectedOption }) => {
+  const characters = ApiConnector();
+  const comics = ComicsConnector();
 
   const iconMapping: { [key: string]: string } = {
     Characters: HeroIcon,
@@ -19,28 +25,25 @@ const Middle: React.FC<MiddleProps> = ({ selectedOption }) => {
   return (
     <section className={styles['middle-container']}>
       <Subtext icon={iconMapping[selectedOption]} text={selectedOption} />
+
+      <Link to="/info">
       <div className={styles['cards-container']}>
         {selectedOption === 'Characters' ? (
         <>
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
+          <Cards characters={characters} />
         </>
         ) : (
   
           <>
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
-          <Cards image={Img} text='Comic' />
+          <CardComics comics={comics} />
+
           </>
         )}
 
-
       </div>
+      </Link>
+  
+
 
     </section>
   );
