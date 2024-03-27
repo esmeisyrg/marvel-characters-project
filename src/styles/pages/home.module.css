@@ -42,3 +42,12 @@ ul{
 .header{
     padding: 3rem 0;
 }
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 80%;
+    }
+    
+ 
+    
+}

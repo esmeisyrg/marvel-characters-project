@@ -5,12 +5,17 @@ type ButtonProps = {
     link?: string
 }
 
-export default function button({text, link}: ButtonProps) {
+export default function utton({text, link}: ButtonProps) {
+  const handleClick = () => {
+    if (link) {
+      window.location.href = link
+    }
+  }
+
   return (
-    <a href={link}>
-        <button className={styles.button}>
-            <p>{text}</p>
-        </button>
-    </a>
+    <button className={styles.button} onClick={handleClick} >
+          <p>{text}</p>
+    </button>
+
   )
 }

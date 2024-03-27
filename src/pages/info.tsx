@@ -27,7 +27,6 @@ export default function Info() {
 
 
           <div className={styles.rigth}>
-
             <h4 className={styles.title}>Spideram</h4>
             <p className={styles.text}>Hi there</p>
 

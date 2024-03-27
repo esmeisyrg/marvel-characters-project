@@ -1,5 +1,5 @@
 .title{
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: #EA2328;
     font-family: var(--heroes-font);
 }
@@ -32,4 +32,19 @@
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
+}
+
+.flash{
+    width: 8.5rem;
+    height: auto;
+}
+
+@media screen and (max-width: 768px){
+    .right{
+        display: none;
+    }
+
+    .container{
+        margin-top: 1.5rem;
+    }
 }

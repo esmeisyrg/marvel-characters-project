@@ -1,3 +1,4 @@
+
 .image-container{
     width: 10rem; /* Ancho máximo del contenedor */
     height: 15.5rem; /* Alto máximo del contenedor */
@@ -20,4 +21,20 @@
     font-family: var(--main-font);
     text-align: center;
     margin-top: 0.7rem;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media(max-width: 768px ){
+    .image-container{
+        width: 9rem;
+        height: 12rem;
+    }
+  
 }
