@@ -16,14 +16,23 @@ import ComicsConnector from '../utils/comicsConnector';
 export default function Home() {
     const [selectedOption, setSelectedOption] = useState<'Characters' | 'Comics'>('Characters');
     const [searchTerm, setSearchTerm] = useState(selectedOption === 'Characters' ? 'Spider-Man' : 'Avengers'); // Establecer término de búsqueda por defecto
-    
+    const [showTemporarySearchTerm, setShowTemporarySearchTerm] = useState(false);
+
     const handleOptionChange = (option: 'Characters' | 'Comics') => {
         setSelectedOption(option);
     };
 
+ 
     useEffect(() => {
         // Updates the search input
         setSearchTerm(selectedOption === 'Characters' ? 'Spider-Man' : 'Avengers');
+        setShowTemporarySearchTerm(true);
+
+        const timer = setTimeout(() => {
+            setShowTemporarySearchTerm(false);
+        }, 2000);
+
+        return () => clearTimeout(timer); 
     }, [selectedOption]);
 
     const characters = ApiConnector(searchTerm);
@@ -58,7 +67,7 @@ export default function Home() {
                     <div className={styles2.left}>
                         <h1 className={styles2.title}>MARVEL</h1>
                         <p className={styles2.text}>Dive into the amazing Marvel Universe</p>
-                        <SearchLabel searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+                        <SearchLabel searchTerm={showTemporarySearchTerm ? searchTerm : ''} setSearchTerm={setSearchTerm} />
                     </div>
                     
                     <div className={styles2.right}>
