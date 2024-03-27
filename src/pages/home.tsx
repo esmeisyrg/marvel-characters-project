@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from '../styles/pages/home.module.css';
 import styles2 from '../styles/sections/top.module.css';
 import styles3 from '../styles/sections/middle.module.css';
@@ -70,7 +69,6 @@ export default function Home() {
                 <section className={styles3['middle-container']}>
                     <Subtext icon={iconMapping[selectedOption]} text={selectedOption} />
 
-                    <Link to="/info">
                         <div className={styles3['cards-container']}>
                             {selectedOption === 'Characters' ? (
                                    <Cards characters={characters} />
@@ -78,7 +76,6 @@ export default function Home() {
                                     <CardComics comics={comics} />
                             )}
                         </div>
-                    </Link>
                 </section>
 
                 <Footer/>
