@@ -14,7 +14,6 @@ export default function Info() {
 
             <IoArrowBackCircle />
           </Link>
-
           </div>
 
         </article>
