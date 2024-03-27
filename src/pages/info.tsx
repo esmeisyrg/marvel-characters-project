@@ -11,7 +11,6 @@ export default function Info() {
         <article className={styles['header-icon']}>
           <div className={styles.icon}>
           <Link to="/home">
-
             <IoArrowBackCircle />
           </Link>
           </div>
