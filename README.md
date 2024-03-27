@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# Marvel Heroes Gallery
+-- In progress --
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built with TypeScript, leveraging CSS Modules for styling and integrating with the Marvel API to display a gallery of Marvel heroes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Marvel API Integration**: Utilizes the official Marvel API to fetch data about various Marvel characters and display them within the application.
+- **Responsive Design**: The application is designed to be responsive, ensuring optimal viewing experience across different devices and screen sizes.
+- **Search Functionality**: Allows users to search for specific Marvel characters using the provided search bar.
+- **Character and Comic Details**: Clicking on a character card displays detailed information about that particular character, including their name, description, and associated comics.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run this project locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Install dependencies using `npm install`.
+4. Obtain API keys from the [Marvel Developer Portal](https://developer.marvel.com/) and update the `.env.example` file with your keys.
+5. Rename `.env.example` to `.env`.
+6. Start the development server with `npm start`.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Technologies Used
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A statically typed superset of JavaScript that adds optional types.
+- **CSS Modules**: A CSS approach that allows for local scoping of styles in the component-based architecture.
+- **React Query and Axios**: A promise-based HTTP client for making requests to the Marvel API.
+- **React Router**: A library for adding routing to React applications, used here for navigation.
+
+## Deployment
+
+This project is deployed using Surge. 
+
+## Contributing
+
+Contributions to this project are welcome! Feel free to open a pull request or an issue if you encounter any problems or have suggestions for improvements.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
