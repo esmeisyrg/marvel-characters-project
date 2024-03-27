@@ -4,6 +4,7 @@ import Image from '../assets/images/marvelpic.jpg'
 import { Link } from 'react-router-dom';
 
 export default function Info() {
+  
   return (
     <section className={styles.container}>
       <div className={styles['info-container']}>
@@ -29,13 +30,9 @@ export default function Info() {
           <div className={styles.rigth}>
             <h4 className={styles.title}>Spideram</h4>
             <p className={styles.text}>Hi there</p>
-
           </div>
-
-        
+          
         </article>
-
-
 
       </div>
 

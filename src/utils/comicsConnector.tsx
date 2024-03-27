@@ -1,26 +1,26 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios'; 
 
-const ComicsConnector = () => {
-    const [comics, setComics] = useState([])
+const ComicsConnector = (searchTerm: string) => {
+    const [comics, setComics] = useState([]);
 
     useEffect(() => {
-        fetch('https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=5573ad9b2ed436d23a8f1e70ed063b02&hash=b28d6eb01e6ac4578c500bf402b5dc73')
+        axios.get(`https://gateway.marvel.com:443/v1/public/comics`, {
+            params: {
+                ts: 1,
+                apikey: '5573ad9b2ed436d23a8f1e70ed063b02',
+                hash: 'b28d6eb01e6ac4578c500bf402b5dc73',
+                titleStartsWith: searchTerm
+            }
+        })
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch');
-              }
-              return response.json();
-            })
-            .then(data =>{
-                setComics(data.data.results);
-                console.log(data);
-            })
+            setComics(response.data.data.results);
+            console.log(response.data);
+        })
         .catch(error => console.error('Fetch error:', error));
-    }, [])      
+    }, [searchTerm]);
 
-    console.log(comics);
-    
-    return comics
+    return comics;
 }
 
-export default ComicsConnector
+export default ComicsConnector;

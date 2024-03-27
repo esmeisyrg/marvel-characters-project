@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/pages/home.module.css';
 import styles2 from '../styles/sections/top.module.css';
@@ -16,13 +16,19 @@ import ComicsConnector from '../utils/comicsConnector';
 
 export default function Home() {
     const [selectedOption, setSelectedOption] = useState<'Characters' | 'Comics'>('Characters');
-
+    const [searchTerm, setSearchTerm] = useState(selectedOption === 'Characters' ? 'Spider-Man' : 'Avengers'); // Establecer término de búsqueda por defecto
+    
     const handleOptionChange = (option: 'Characters' | 'Comics') => {
         setSelectedOption(option);
     };
 
-    const characters = ApiConnector();
-    const comics = ComicsConnector();
+    useEffect(() => {
+        // Updates the search input
+        setSearchTerm(selectedOption === 'Characters' ? 'Spider-Man' : 'Avengers');
+    }, [selectedOption]);
+
+    const characters = ApiConnector(searchTerm);
+    const comics = ComicsConnector(searchTerm);
 
     const iconMapping: { [key: string]: string } = {
         Characters: HeroIcon,
@@ -53,7 +59,7 @@ export default function Home() {
                     <div className={styles2.left}>
                         <h1 className={styles2.title}>MARVEL</h1>
                         <p className={styles2.text}>Dive into the amazing Marvel Universe</p>
-                        <SearchLabel/>
+                        <SearchLabel searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
                     </div>
                     
                     <div className={styles2.right}>
@@ -67,9 +73,9 @@ export default function Home() {
                     <Link to="/info">
                         <div className={styles3['cards-container']}>
                             {selectedOption === 'Characters' ? (
-                                <Cards characters={characters} />
-                            ) : (
-                                <CardComics comics={comics} />
+                                   <Cards characters={characters} />
+                                   ) : (
+                                    <CardComics comics={comics} />
                             )}
                         </div>
                     </Link>
