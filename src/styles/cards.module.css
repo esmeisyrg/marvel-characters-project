@@ -1,0 +1,45 @@
+
+.image-container{
+    width: 10rem; /* Ancho máximo del contenedor */
+    height: 15.5rem; /* Alto máximo del contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el tamaño del contenedor */
+    display: flex;    
+    border: 4px solid #f4f4f4;
+    border-radius: 0.2rem;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.image-container:hover{
+    transform: scale(1.05);
+}
+
+.image{
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor manteniendo su relación de aspecto */
+}
+
+.text{
+    color: var(--main-color);
+    font-family: var(--main-font);
+    text-align: center;
+    margin-top: 0.7rem;
+    z-index: 1;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media(max-width: 768px ){
+    .image-container{
+        width: 9rem;
+        height: 12rem;
+    }
+  
+}

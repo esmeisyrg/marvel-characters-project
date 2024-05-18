@@ -1,0 +1,10 @@
+.text{
+    color: white;
+    font-size: 1rem;
+    font-family: var(--main-font);
+}
+
+.footer{
+    padding-bottom: 2rem;
+
+}

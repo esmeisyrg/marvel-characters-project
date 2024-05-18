@@ -1,0 +1,16 @@
+.button{
+    font-family: var(--main-font);
+    padding: 0.5rem 2rem;
+    color: #f5f5f5;
+    background-color: #EA2328;
+    border: none;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #C42024;
+}

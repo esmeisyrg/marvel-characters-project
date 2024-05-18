@@ -1,0 +1,21 @@
+@import '../styles/variables.css';
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0C0C0C;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}

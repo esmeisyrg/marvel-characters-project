@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(ellipse at 50% -20%, rgba(112, 111, 185, 0.217), rgba(255, 255, 255, 0));
+}
+
+.marvel{
+    max-width: 20rem;
+    height: auto;
+}
+
+.text{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #f5f5f5ff;
+    font-size: 1rem;
+}
+
+.left{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    width: 50%;
+    flex-direction: column;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) and (max-width: 1024px) {
+
+    .marvel{
+        max-width: 16rem;
+
+    }
+    .left {
+        display: none; /* Oculta el lado izquierdo en dispositivos más pequeños */
+    }
+
+    body{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.78) 67.37%, rgba(0, 0, 0, 0.573) 80.29%), url('../../assets/images/marvelpic.jpg');
+    }
+    .container{
+        
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .right {
+        /*add a liner gradient to the image below*/
+
+        width: 100%; 
+        margin: 0 auto; 
+    }
+}

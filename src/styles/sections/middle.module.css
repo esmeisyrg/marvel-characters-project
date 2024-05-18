@@ -1,0 +1,19 @@
+.middle-container{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); 
+    margin-top: 2.5rem;
+    gap: 3.4rem;
+}
+
+@media screen and (max-width: 768px){
+    .cards-container{
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); 
+    }
+}
+

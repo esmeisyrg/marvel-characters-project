@@ -7,9 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+.vite
 node_modules
 dist
 dist-ssr
+note
+enrutamiento-main
 *.local
 
 # Editor directories and files
@@ -20,5 +23,6 @@ dist-ssr
 *.suo
 *.ntvs*
 *.njsproj
+
 *.sln
 *.sw?
