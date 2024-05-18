@@ -4,6 +4,13 @@
     font-family: var(--heroes-font);
 }
 
+.containers{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
 .text{
     font-family: var(--main-font);
     color: var(--main-color);
@@ -38,6 +45,14 @@
     width: 8.5rem;
     height: auto;
 }
+
+.icon{
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    
+}
+
 
 @media screen and (max-width: 768px){
     .right{

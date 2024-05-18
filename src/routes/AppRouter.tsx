@@ -6,12 +6,12 @@ import Info from '../pages/info'
 
 export default function AppRouter() {
   return (
-      <Routes> 
-        <Route path="/" element={<Login/>} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/info" element={<Info/>}/>
-        <Route path="/*" element={<Error404/>}/>
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/info/:id" element={<Info />} />
+      <Route path="/*" element={<Error404 />} />
+    </Routes>
 
   )
 }
